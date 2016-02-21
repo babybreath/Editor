@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>kindeditor使用示例</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" > 
+<meta name="format-detection" content="telephone=no" >
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+<meta name="renderer" content="webkit">
+<link href="/kindeditor/themes/default/default.css" rel="stylesheet" />
+<script src="/kindeditor/kindeditor-all-min.js"></script>
+<script src="/kindeditor/lang/zh_CN.js"></script>
+<script>
+var config = {
+	items:  ['source','preview','|','undo','redo','|','formatblock','fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline','strikethrough','removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'indent','outdent','insertorderedlist','insertunorderedlist', '|', 'image', 'link','table','hr'],
+	width: '700px',
+	height: '500px',
+	uploadJson: '/upload'
+};
+KindEditor.ready(function(K) {
+    window.editor = K.create('#editor_id', config);
+});
+</script>
+
+</head>
+<body>
+
+<textarea id="editor_id" name="content" cols="100" rows="8"></textarea>
+<button id="submit">submit</button>
+<script src="./js/jquery-2.2.0.min.js"></script>
+<script src="./js/demo1.js"></script>
+</body>
+</html>
